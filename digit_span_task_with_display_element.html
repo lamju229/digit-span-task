@@ -11,48 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
     <link href="jspsych-6.0.4/css/jspsych_digitspan.css" rel="stylesheet" type="text/css"></link>
   </head>
-  <body>
-    
-    <!-- Change 3: Adding extra scripts for Qualtrics -->
-    <!-- COPY PASTE TO QUALTRICS FROM HERE -->
-    <link href="https://lamju229.github.io/digit-span-task/jspsych-6.0.4/css/jspsych.css" rel="stylesheet" type="text/css"></link>
-    <div>
-      <span style="font-size: 24px;">
-        <br><br>
-        If you are seeing this message for <span style="color: rgb(255, 0, 0);"><b>more than 5 minutes</b></span>,<br>
-        please screen-capture this screen and send the image to us.
-        <br><br>
-        <span style="font-size: 28px;">We are very sorry for the inconvenience.</span>
-      </span>
-    </div>
-
-    <style>
-    #display_stage_background {
-        width: 100vw;
-        background-color: white;
-        z-index: -1;
-    }
-
-    #display_stage {
-        position: fixed;
-        left: 1vw;
-        top: 1vh;
-        height: 98vh;
-        width: 98vw;
-        background-color: white;
-        box-shadow: 1px 1px 1px #999;
-        border-radius: 15px;
-        z-index: 0;
-        overflow-y: hidden;
-        overflow-x: hidden;
-    }
-</style>
-    <!-- COPY PASTE UP TO QUALTRICS TO HERE -->
-
-    <div id='display_stage_background'></div>
-    <div id='display_stage'></div>
-
-</body>
+  <body></body>
   <script>
 
 /*
@@ -268,7 +227,6 @@ timeline.push(conclusion)
 
 jsPsych.init({
   timeline: timeline,
-  display_element: 'display_stage',
   on_finish: function() {
     jsPsych.data.displayData(); // comment out if you do not want to display results at the end of task
   }
