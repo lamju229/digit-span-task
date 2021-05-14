@@ -36,8 +36,8 @@ Qualtrics.SurveyEngine.addOnload(function()
 
     /* Change 4: Appending the display_stage Div using jQuery */
     // jQuery is loaded in Qualtrics by default
-    // jQuery("<div id = 'display_stage_background'></div>").appendTo('body');
-    // jQuery("<div id = 'display_stage'></div>").appendTo('body');
+     jQuery("<div id = 'display_stage_background'></div>").appendTo('body');
+     jQuery("<div id = 'display_stage'></div>").appendTo('body');
 
 
     /* Change 5: Wrapping jsPsych.init() in a function */
@@ -245,6 +245,11 @@ jsPsych.init({
   timeline: timeline,
   on_finish: function() {
     jsPsych.data.displayData(); // comment out if you do not want to display results at the end of task
+
+	/* Change 6: Adding the clean up and continue functions.*/
+        // clear the stage
+	jQuery('#display_stage').remove();
+        jQuery('#display_stage_background').remove();
 	
 	// simulate click on Qualtrics "next" button, making use of the Qualtrics JS API
     qthis.clickNextButton();
