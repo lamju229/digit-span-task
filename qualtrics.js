@@ -21,8 +21,8 @@ Qualtrics.SurveyEngine.addOnload(function()
     	task_github + "jspsych-6.0.4/plugins/jspsych-survey-text.js",
     	task_github + "jspsych-6.0.4/plugins/jspsych-instructions.js",
     	task_github + "jspsych-6.0.4/plugins/jspsych-fullscreen.js",
-    	https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
-    	https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"
+    	"https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
+    	"https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"
 
     ];
 
