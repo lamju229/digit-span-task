@@ -2,21 +2,28 @@ Qualtrics.SurveyEngine.addOnload(function()
 {
     /*Place your JavaScript here to run when the page loads*/
 
-    /* Change 2: Hiding the Next button */
+   /* Change 1: Hiding the Next button */
     // Retrieve Qualtrics object and save in qthis
     var qthis = this;
 
     // Hide buttons
     qthis.hideNextButton();
 
-    /* Change 3: Defining and load required resources */
-    var jslib_url = "https://lamju229.github.io/digit-span-task/";	
+    /* Change 2: Defining and load required resources */
+    var task_github = "https://lamju229.github.io/digit-span-task/"; // https://<your-github-username>.github.io/<your-experiment-name>
 
-    // the below urls must be accessible with your browser
-    // for example, https://kywch.github.io/jsPsych/jspsych.js
+    // requiredResources must include all the JS files that demo-simple-rt-task-transformed.html uses.
     var requiredResources = [
-        jslib_url + "jspsych-6.0.4/jspsych.js",
-        jslib_url + "jspsych-6.0.4/plugins/jspsych-html-keyboard-response.js"
+	    
+	task_github + "jspsych-6.0.4/jspsych.js",
+    	task_github + "jspsych-6.0.4/plugins/jspsych-html-keyboard-response.js",
+    	task_github + "jspsych-6.0.4/plugins/jspsych-digit-span-recall.js",
+    	task_github + "jspsych-6.0.4/plugins/jspsych-survey-text.js",
+    	task_github + "jspsych-6.0.4/plugins/jspsych-instructions.js",
+    	task_github + "jspsych-6.0.4/plugins/jspsych-fullscreen.js",
+    	https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
+    	https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"
+
     ];
 
     function loadScript(idx) {
@@ -34,13 +41,12 @@ Qualtrics.SurveyEngine.addOnload(function()
         loadScript(0);
     }
 
-    /* Change 4: Appending the display_stage Div using jQuery */
+    /* Change 3: Appending the display_stage Div using jQuery */
     // jQuery is loaded in Qualtrics by default
-     jQuery("<div id = 'display_stage_background'></div>").appendTo('body');
-     jQuery("<div id = 'display_stage'></div>").appendTo('body');
+    jQuery("<div id = 'display_stage_background'></div>").appendTo('body');
+    jQuery("<div id = 'display_stage'></div>").appendTo('body');
 
-
-    /* Change 5: Wrapping jsPsych.init() in a function */
+    /* Change 4: Wrapping jsPsych.init() in a function */
     function initExp() {
 
   nTrials = 14 // number of trials in the test
