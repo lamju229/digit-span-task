@@ -253,9 +253,9 @@ jsPsych.init({
     jsPsych.data.displayData(); // comment out if you do not want to display results at the end of task
 
 	 // save to qualtrics embedded data
-        Qualtrics.SurveyEngine.setEmbeddedData("span nError", nError);
-        Qualtrics.SurveyEngine.setEmbeddedData("longest span", highest_span_score);
-	Qualtrics.SurveyEngine.setEmbeddedData("consec span", consec_error_score);
+        Qualtrics.SurveyEngine.setEmbeddedData("nError", nError);
+        Qualtrics.SurveyEngine.setEmbeddedData("highest_span_score", highest_span_score);
+	    Qualtrics.SurveyEngine.setEmbeddedData("consec_error_score", consec_error_score);
 	  
 	/* Change 6: Adding the clean up and continue functions.*/
         // clear the stage
