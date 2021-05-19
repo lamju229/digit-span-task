@@ -53,13 +53,13 @@
   var consec_error_score = 0
 
   // first page. identifies participant for data storage
- // var p_details = {
- //   type:"survey-text",
- //   questions: [{prompt: "Enter participant number, name, or ID"}],
- //   on_finish:function(){
- //     partN = jsPsych.data.get().last(1).values()[0].partNum
- //     partN = partN.replace(/['"]+/g,'')
-//      console.log(partN[0])
+  var p_details = {
+    type:"survey-text",
+    questions: [{prompt: "Enter participant number, name, or ID"}],
+    on_finish:function(){
+      partN = jsPsych.data.get().last(1).values()[0].partNum
+      partN = partN.replace(/['"]+/g,'')
+      console.log(partN[0])
     }
   }
 
